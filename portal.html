@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APITR | API Portal & Dokümantasyonu</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,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">
+    <!-- Tailwind CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e5e5}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Inter,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:JetBrains Mono,Fira Code,Consolas,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#a3a3a3}input::placeholder,textarea::placeholder{opacity:1;color:#a3a3a3}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-bottom-10{bottom:-2.5rem}.-right-10{right:-2.5rem}.bottom-0{bottom:0}.bottom-6{bottom:1.5rem}.left-0{left:0}.left-3{left:.75rem}.right-3{right:.75rem}.right-4{right:1rem}.right-6{right:1.5rem}.top-0{top:0}.top-1\/2{top:50%}.top-16{top:4rem}.top-24{top:6rem}.top-3{top:.75rem}.z-10{z-index:10}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:.25rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.ml-2{margin-left:.5rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-4{margin-top:1rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.hidden{display:none}.h-12{height:3rem}.h-16{height:4rem}.h-3\.5{height:.875rem}.h-36{height:9rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-64{height:16rem}.h-9{height:2.25rem}.min-h-screen{min-height:100vh}.w-12{width:3rem}.w-3\.5{width:.875rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-72{width:18rem}.w-auto{width:auto}.w-fit{width:-moz-fit-content;width:fit-content}.w-full{width:100%}.min-w-0{min-width:0}.max-w-2xl{max-width:42rem}.max-w-7xl{max-width:80rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-translate-x-full{--tw-translate-x:-100%}.-translate-x-full,.-translate-y-1\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%}.translate-y-20{--tw-translate-y:5rem}.rotate-180,.translate-y-20{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-180{--tw-rotate:180deg}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-8{gap:2rem}.space-y-0\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.125rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.125rem*var(--tw-space-y-reverse))}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-l-4{border-left-width:4px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.border-black{--tw-border-opacity:1;border-color:rgb(0 0 0/var(--tw-border-opacity,1))}.border-emerald-400\/30{border-color:rgba(52,211,153,.3)}.border-gray-100{--tw-border-opacity:1;border-color:rgb(245 245 245/var(--tw-border-opacity,1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 229 229/var(--tw-border-opacity,1))}.border-gray-200\/50{border-color:hsla(0,0%,90%,.5)}.border-gray-200\/70{border-color:hsla(0,0%,90%,.7)}.border-gray-200\/80{border-color:hsla(0,0%,90%,.8)}.border-gray-300{--tw-border-opacity:1;border-color:rgb(212 212 212/var(--tw-border-opacity,1))}.border-gray-800{--tw-border-opacity:1;border-color:rgb(38 38 38/var(--tw-border-opacity,1))}.border-white\/10{border-color:hsla(0,0%,100%,.1)}.border-white\/20{border-color:hsla(0,0%,100%,.2)}.border-l-emerald-500{--tw-border-opacity:1;border-left-color:rgb(16 185 129/var(--tw-border-opacity,1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0/var(--tw-bg-opacity,1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.bg-emerald-500\/15{background-color:rgba(16,185,129,.15)}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(245 245 245/var(--tw-bg-opacity,1))}.bg-gray-100\/70{background-color:hsla(0,0%,96%,.7)}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 229 229/var(--tw-bg-opacity,1))}.bg-gray-200\/60{background-color:hsla(0,0%,90%,.6)}.bg-gray-300{--tw-bg-opacity:1;background-color:rgb(212 212 212/var(--tw-bg-opacity,1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(250 250 250/var(--tw-bg-opacity,1))}.bg-gray-50\/30{background-color:hsla(0,0%,98%,.3)}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(38 38 38/var(--tw-bg-opacity,1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(23 23 23/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/10{background-color:hsla(0,0%,100%,.1)}.bg-white\/5{background-color:hsla(0,0%,100%,.05)}.bg-white\/80{background-color:hsla(0,0%,100%,.8)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.from-neutral-900{--tw-gradient-from:#171717 var(--tw-gradient-from-position);--tw-gradient-to:hsla(0,0%,9%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.to-black{--tw-gradient-to:#000 var(--tw-gradient-to-position)}.p-1{padding:.25rem}.p-1\.5{padding:.375rem}.p-12{padding:3rem}.p-2{padding:.5rem}.p-2\.5{padding:.625rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-3\.5{padding-left:.875rem;padding-right:.875rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pl-9{padding-left:2.25rem}.pr-4{padding-right:1rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:JetBrains Mono,Fira Code,Consolas,monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-\[0\.25em\]{letter-spacing:.25em}.tracking-tight{letter-spacing:-.025em}.tracking-wide{letter-spacing:.025em}.tracking-wider{letter-spacing:.05em}.text-black{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity,1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183/var(--tw-text-opacity,1))}.text-emerald-500{--tw-text-opacity:1;color:rgb(16 185 129/var(--tw-text-opacity,1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105/var(--tw-text-opacity,1))}.text-gray-100{--tw-text-opacity:1;color:rgb(245 245 245/var(--tw-text-opacity,1))}.text-gray-300{--tw-text-opacity:1;color:rgb(212 212 212/var(--tw-text-opacity,1))}.text-gray-400{--tw-text-opacity:1;color:rgb(163 163 163/var(--tw-text-opacity,1))}.text-gray-500{--tw-text-opacity:1;color:rgb(115 115 115/var(--tw-text-opacity,1))}.text-gray-600{--tw-text-opacity:1;color:rgb(82 82 82/var(--tw-text-opacity,1))}.text-gray-700{--tw-text-opacity:1;color:rgb(64 64 64/var(--tw-text-opacity,1))}.text-gray-800{--tw-text-opacity:1;color:rgb(38 38 38/var(--tw-text-opacity,1))}.text-gray-900{--tw-text-opacity:1;color:rgb(23 23 23/var(--tw-text-opacity,1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-0{opacity:0}.opacity-10{opacity:.1}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-md,.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.blur{--tw-blur:blur(8px)}.blur,.blur-3xl{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-3xl{--tw-blur:blur(64px)}.invert{--tw-invert:invert(100%)}.filter,.invert{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px)}.backdrop-blur-md,.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-200{transition-duration:.2s}.duration-300{transition-duration:.3s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.selection\:bg-neutral-500 ::-moz-selection{--tw-bg-opacity:1;background-color:rgb(115 115 115/var(--tw-bg-opacity,1))}.selection\:bg-neutral-500 ::selection{--tw-bg-opacity:1;background-color:rgb(115 115 115/var(--tw-bg-opacity,1))}.selection\:text-white ::-moz-selection{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.selection\:text-white ::selection{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.selection\:bg-neutral-500::-moz-selection{--tw-bg-opacity:1;background-color:rgb(115 115 115/var(--tw-bg-opacity,1))}.selection\:bg-neutral-500::selection{--tw-bg-opacity:1;background-color:rgb(115 115 115/var(--tw-bg-opacity,1))}.selection\:text-white::-moz-selection{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.hover\:bg-emerald-500\/25:hover{background-color:rgba(16,185,129,.25)}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(245 245 245/var(--tw-bg-opacity,1))}.hover\:bg-gray-50\/50:hover{background-color:hsla(0,0%,98%,.5)}.hover\:bg-gray-700:hover{--tw-bg-opacity:1;background-color:rgb(64 64 64/var(--tw-bg-opacity,1))}.hover\:bg-neutral-800:hover{--tw-bg-opacity:1;background-color:rgb(38 38 38/var(--tw-bg-opacity,1))}.hover\:text-gray-600:hover{--tw-text-opacity:1;color:rgb(82 82 82/var(--tw-text-opacity,1))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(23 23 23/var(--tw-text-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-neutral-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(115 115 115/var(--tw-ring-opacity,1))}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.dark\:border-darkborder:is(.dark *){--tw-border-opacity:1;border-color:rgb(31 31 31/var(--tw-border-opacity,1))}.dark\:border-gray-200:is(.dark *){--tw-border-opacity:1;border-color:rgb(229 229 229/var(--tw-border-opacity,1))}.dark\:border-gray-700:is(.dark *){--tw-border-opacity:1;border-color:rgb(64 64 64/var(--tw-border-opacity,1))}.dark\:border-gray-800:is(.dark *){--tw-border-opacity:1;border-color:rgb(38 38 38/var(--tw-border-opacity,1))}.dark\:border-gray-800\/60:is(.dark *){border-color:rgba(38,38,38,.6)}.dark\:border-white:is(.dark *){--tw-border-opacity:1;border-color:rgb(255 255 255/var(--tw-border-opacity,1))}.dark\:border-white\/20:is(.dark *){border-color:hsla(0,0%,100%,.2)}.dark\:bg-darkbg:is(.dark *){--tw-bg-opacity:1;background-color:rgb(0 0 0/var(--tw-bg-opacity,1))}.dark\:bg-darkbg\/80:is(.dark *){background-color:rgba(0,0,0,.8)}.dark\:bg-darkcard:is(.dark *){--tw-bg-opacity:1;background-color:rgb(10 10 10/var(--tw-bg-opacity,1))}.dark\:bg-gray-800:is(.dark *){--tw-bg-opacity:1;background-color:rgb(38 38 38/var(--tw-bg-opacity,1))}.dark\:bg-gray-800\/80:is(.dark *){background-color:rgba(38,38,38,.8)}.dark\:bg-gray-900:is(.dark *){--tw-bg-opacity:1;background-color:rgb(23 23 23/var(--tw-bg-opacity,1))}.dark\:bg-gray-900\/20:is(.dark *){background-color:hsla(0,0%,9%,.2)}.dark\:bg-gray-900\/70:is(.dark *){background-color:hsla(0,0%,9%,.7)}.dark\:bg-gray-900\/80:is(.dark *){background-color:hsla(0,0%,9%,.8)}.dark\:bg-white:is(.dark *){--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.dark\:bg-white\/10:is(.dark *){background-color:hsla(0,0%,100%,.1)}.dark\:bg-white\/20:is(.dark *){background-color:hsla(0,0%,100%,.2)}.dark\:text-black:is(.dark *){--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity,1))}.dark\:text-emerald-400:is(.dark *){--tw-text-opacity:1;color:rgb(52 211 153/var(--tw-text-opacity,1))}.dark\:text-gray-100:is(.dark *){--tw-text-opacity:1;color:rgb(245 245 245/var(--tw-text-opacity,1))}.dark\:text-gray-200:is(.dark *){--tw-text-opacity:1;color:rgb(229 229 229/var(--tw-text-opacity,1))}.dark\:text-gray-300:is(.dark *){--tw-text-opacity:1;color:rgb(212 212 212/var(--tw-text-opacity,1))}.dark\:text-gray-400:is(.dark *){--tw-text-opacity:1;color:rgb(163 163 163/var(--tw-text-opacity,1))}.dark\:text-gray-500:is(.dark *){--tw-text-opacity:1;color:rgb(115 115 115/var(--tw-text-opacity,1))}.dark\:text-gray-900:is(.dark *){--tw-text-opacity:1;color:rgb(23 23 23/var(--tw-text-opacity,1))}.dark\:text-white:is(.dark *){--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.dark\:invert-0:is(.dark *){--tw-invert:invert(0);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.dark\:hover\:bg-gray-800:hover:is(.dark *){--tw-bg-opacity:1;background-color:rgb(38 38 38/var(--tw-bg-opacity,1))}.dark\:hover\:bg-gray-800\/30:hover:is(.dark *){background-color:rgba(38,38,38,.3)}.dark\:hover\:bg-gray-900:hover:is(.dark *){--tw-bg-opacity:1;background-color:rgb(23 23 23/var(--tw-bg-opacity,1))}.dark\:hover\:bg-neutral-200:hover:is(.dark *){--tw-bg-opacity:1;background-color:rgb(229 229 229/var(--tw-bg-opacity,1))}.dark\:hover\:text-gray-200:hover:is(.dark *){--tw-text-opacity:1;color:rgb(229 229 229/var(--tw-text-opacity,1))}.dark\:hover\:text-white:hover:is(.dark *){--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}@media (min-width:640px){.sm\:block{display:block}.sm\:inline-block{display:inline-block}.sm\:hidden{display:none}.sm\:h-40{height:10rem}.sm\:w-64{width:16rem}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:gap-4{gap:1rem}.sm\:p-5{padding:1.25rem}.sm\:p-6{padding:1.5rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-sm{font-size:.875rem;line-height:1.25rem}}@media (min-width:768px){.md\:flex{display:flex}.md\:w-80{width:20rem}}@media (min-width:1024px){.lg\:static{position:static}.lg\:inset-y-0{top:0;bottom:0}.lg\:hidden{display:none}.lg\:translate-x-0{--tw-translate-x:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.lg\:border-r-0{border-right-width:0}.lg\:bg-transparent{background-color:transparent}.lg\:p-0{padding:0}.lg\:px-8{padding-left:2rem;padding-right:2rem}}
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        pre, code {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        /* Custom scrollbars */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(156, 163, 175, 0.3);
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(156, 163, 175, 0.5);
+        }
+        .backdrop-blur-md {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-darkbg dark:text-gray-100 min-h-screen flex flex-col antialiased selection:bg-neutral-500 selection:text-white">
+
+    <!-- Top Navigation Header -->
+    <header class="sticky top-0 z-40 w-full border-b border-gray-200 dark:border-darkborder bg-white/80 dark:bg-darkbg/80 backdrop-blur-md transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+                <div class="flex items-center gap-2">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHkAAABgCAYAAAA5I90aAAAQkUlEQVR42u2de5AldXXHP6fvndnd2WVf7PISlUUiPgCRLWUFjcSIhWIVRq0SrfyBlK9EC1BCSmOCD6JRCLgBDSTxrYWCyCvhIRBdFkECCklYoUxAQFxAcIHdDbPDzr198kefH3PmR/d99r07j+6qW3fmzr3dfX/f3/d7vuf8TvfAPNlUVeyxt6peYD8nqipU25wBuWbPX9VsO9m/Xm1zB+BjDeCdqvq0qq6x15NqlGa/TCequlRVH1TV1EBWVf1Rxea5AXI9kumGPU/a8wkV0HNDpt8UAauq2rTHY6q6KjC+GrXZKdNLVPU+k+mmTt8Cq7/rWV9ts0+mv5zDYr+F199WyfbslOnXR4zN25rG8odUdbmxv5LtWSDTNVVdpKp3OyBbbWES/HMl27NLps9pI9NFQB9dyfbskOnDjb0Nk+JOtiDb96rqbqYGVclzhsr0iKre2UEsbmXC1leyPbNl+jNdyrTfUpsYDVU9opLtmSnTr1DVZ7qU6aLYvElVF1SyPfNk+uc9ynSRbH+6ku2ZJdN/1YdMF8n2hKoeZPuvcuddLNMHGSD9yHSRbN+qqvVKtnetTNcNiDJkuki2/6KS7V0r058oUaaLZHu7qq6pVqqGC3Bizwer6o6SZbpItq+tUqrhy3Siqj8bkEwXyfaJFdDDNVunDglgdWvRT6jqvpVsD0emX2yNeM0BynSRbF9SsXnAMm0//2SILM4D+k8qoAcr0ycP0E13ulK12frCqgaDMmXamBxkujFEmS5i87cqNg+GxdftIpkuAvqNswHoZDYALCJNVX0/cDTQBHb1oAqgwPmqujg7zZlb8kxmOMAJkKrq/sDfA+kMOefEzuUA4AwRSWfyWMosYfE1wDElsVjtkZSwn9TG8EgRuTWcb8XkzgGuG8AnGsCNkmRa7HtrSQRJTLZDLV0qkLuT6b2AM0uS6dSAvRc4w0BK+9xnzdTlUOBUY3HltjtlsT1fWKKbDvs43vZ9W0n7DiXPHar68iqt6i5deucAAL7OXSN1xAD2vyF8h6rBoHXpMlHVlar6SMFFar2uCe9Q1ZfYcUbs+eslAh0qcO+r2NwZi78xAJb9dQgFoRypqnuo6uMlLXSECbmlWqlqD/BbSwQ4qMDdqjrqZdTF/T8vsRYezvmyis05btrd8uH+kmS65fVNUY/YHQNQjuMqoPPd9JcHwKoLiwbbqcdrXewua6XqAZu01W2komuJyxrooATbVPV5reJjjg8oc4J9Zd6zObqWeFOH1xJ3M8inthtkFyr2MtPULNHRN1V13bwG2rHorAGw6HYDr23O6sLFnw0gNnd8HnMZ4LUGbqOkNKZrBkUm7D8HoCgnzTs2R4N6+wDY8y/dDqqbdG8o8XyCN5h/zfluQMu8SC3E0kdUdfdeXK07r28OYOJdOW/Y7NpqD1TV8RL7tcJgvtfH2R7ydTET9kSJLb/h3N4+54GOrn64aQBs2ehbd/tUmQ+XXHkLt5FaMae7PJ2LPWkA1xJPquqh/TKlwISVORH/oVelmS2lS1HVF6rq1gFI4dllDZ5j81Elm7BJu93FoXNStt3AXTUAGSy9hOjO99s9nm/q3HW43VTwIDf6iT/XAH5PyX3TYT/vKJsZOSas4fL5yZxHo0t1+uSwZLs+DJnOnnR3ptpqy5i9oZ/qehH5YdmdkiKSWjPho6r6t8DZXe5iJ7ANmAAmga3AY8C4/W2RAdzsYizFjZ3/ObW24PzvMgwWW9flN4ATKLetdiewFrgHSMpuh3WDWgeuAPYBHgW2ANuBJw24p+2xxV6bMDC3AjuASRHZ0eIYFIBHJyAGRRCRxtBBdgD/EfBjyrv6IezndBE5Y6b2O0dA1pjecapAQ0S0i/3sBqwAVgF7Ai8H9rcJ9h3gLlMhHQrI9sUSYCHwC+DFlNPUHtpzf0XWCrsT0G4Gq80504ZZSfR7UJXUGKddHnMEWAwst8cKA3AV8HxgNbCHqciewFJgiTv2+cA5InKfqkre8QcZk2si0lDVzwEHkjXHl3G88CVOEZEJY3HaAXBxPItBiieK9jBJRlR1DNjNHksNuGXA7sBewEoDbYV7Pbx3YYeHmgAuAM4UkUecj9ChybWT6cOBmwsY0I9MXyQixxfJtJPHtrEs53OLgDEH0GJjzm4GylJ7XuV+X2HPY/b+AFjSo1I9qwz22gJ7Hge+B6wXkU0uo2ipIDJAma4DtwGHlGy2xoGDgN9kk3c6iDHwNghBBoP0rTRWrbLXYsDG7LGgpHPWSBnisCA5IHvVexS4BPhHEbmnU3AHKddBpj9pAJcl06lNlL8RkQfzWKyqiSnIPsA7gDdaqFhpbFxUIlB5sbsdgEX798DWHGtvAi4GrhSR3ztwtRujKSWzOLH88kDgTmC0ZJn+D+BIl1ZonEKo6p8C6y3W+a0RfWftAKhBGVMtYOwEsNHStWtE5P5IkbSb8DMokGt28j8GjipRpkMB5TUiclueJBuD3wT8yI67wz5Tc+lLwq67XFddjK1FRZOfAZcCV4vIvVEhSXpx7QORazfQHywR4MDiOnBeAcBBog8AvmkylwIjbVKfXQFsGI8dwK3A5cC1IvI/XpHsXBu9sHZgTA6lS2Bv4JdmYCgpJxbgITNbT/tUx1WkRoEbgVdZlWnUMRdXtZJdyNhx4KfAlQbsfRGwFFWs+t3KYrJYLD7XnGxZLA7Fk1NFZHtOThxM3leAVwNPGYPjz4d7fMiQGbvdpDgvxj4LbABXVV9gBZ69ga+GffZb6Cll7dXk8i3maMsuXV4hIpfkyHQwWh8ATjQG19ooVplAFwG71Vzx5WSLJ7+JgFURaTpg9zMFeg2wxvbzEmCpiJxlPqevkq30CXCQyyXmptdQ3v041OT5EOBBnxO7iXUEcJW9Nwy0RI9YtpMBSPEWYINJ8Q0i8nAEbOrOvU52Q5nDgVcAz7MCilqKt6elfIllEvfn1QOGyeRger5AVigvKycOZuuzIvKAZ7EzWquBr9v7Jpi6D0gszf53KZGxvwNuMGA3iMhjscoEObYrKg80YA+1OvSY7XvCHPZqe33EjNlysgWYE/rtB5MSZPp1ZnrSknPiXwDrwiCLiLpqmlgF6Gjg/1xlKolSpSRida1Pxv4OuN7SnY0isqVFpW0Z8DLgMOClwL4G7E57hH2vtBg84nL5xH5eBXxQRC7uZ6VN+pDpxIFxUMmxOAFeJyI3RywOcfiLwGnAw1YjrkWA1qIJlzgp70WKr7NJtUFEnojqAj68rLCxWAccbL+nBpg/t1DZCqXWpCDujpl5Wwc8QY+rbb1Ka3C1p9mXKkumw37ON4DrzqCEY74d+LCxarQDRnYCbFxSfMqk+FKLsY/nAJu6yVez7OIY4ANkHSHqCjIjpjahWBRi70IDN+88E5Py55tsn9SrCZMeWOxLl3fYQHuTo27fqYuJtCgr4uT+YWPBNotpqTvmIcDVzjzVXf4rOVIdy3bijpVGE3PczNOllu48XACsFigbVh/4ksVTcec34s4zrB3XI3C1wCymtt83i8gtvch2LyCHWHwj8IfAM1FuOq33qIu0pWn7OV5ELnLHCZ9dDFxrce5pZ4JGosGpFQxWAMef66QVKC4H/jWnVkynJUU3EY8CPm2TZtQBvNAYvIDWrT5xaGnad7+LbMGl6+aEeo8Av88AnoxmpOakQXmsjSdYKENelQNwuI/lejMwT9lgSeTEc3ujHGNH3Ln83IC9LCzducpdAjS7ZsuU4mxQ1duB1xvQoYlggYv5sZpJQW09SP245dEfEZEvdSvb0o1M24+rgU3mCsk58Vh6tE2sDH+fsLzxfldBC0brFLK76D1uXzo2WnX3mjrzNOaOuQm4zIC9M5LarhsM2rB5P+AippoIPChSkNbF+bxEfw/KdTjwv93kzvXuJqs07TKPVY7FrYDsBNyGSdnnReTXDthgtI4GPkbWFTlSMDE9Yxe773WPFUuuAG71teGoSFFKzdgArllu/2/A6cBvc/J2opCStwYdTwC1WH6WiBzXTe4sXcr0m834PMP07kO/HJh3DCG/O6JhcetustbaRtiPDdgLDaAl9tlRAzCJzNpCe4+QdYzcAPwAuElEJoqqTwMpYk+vAt5C1omy3Tn3uNcsKQA/L+9PTUHf2U2vuXR40mEg/xvYz6RH2rjlTlKbkLocJSIb3Xq02PEuJms7nXCGJbQWBSlsWtlzg02Im0VkW1wvps812T7q+RdamBnNAVhaMLwI5FFLH9f6DKRlWbLT0iXwOStdTuZ8Ls/0xDFZI6MR3PTXAsB2nMRO+u+scD/uKkCJMWQZWRP794F3kzUTfEhErhGRbXZVYs1aVBu2IDAUgG3Qm/Z9rrYiymqm2peSHPDyHvWcca5Z7r0/8CkbJ+mLyW5GriPrukx7XM3xQCfu+Ulj6u+juH8i8Cn7+xLLE0dsBt9icfbG0PfUS8ozBDaH77kvWYPAqBFEOiBH7LTj56aNyx+LyE3tZFs6LF3eZs53Z7QQ4BkqOQ67SKabJscfEpF/8v1LNqG+Ze9bZCnTXVZavF5ENs9UYFuQ5GQrkmx2prBInqWFAfNGc5kVo9a1C0fSwQn+JfBFA7ioOZ0uXg9u+qeWS4oD+ABj6TNkTXsbbCHgoYghMlOBLSBKQtZ7ttYWVPKATgoKI0lOTi2uEvZREVnfis3SRmr2A/6Lqc7+PBDbGa+8nLkBvFpENjmzNQKcYjHn0oixswbYFrnzYcBPzERKAcgU+J0iaa8ZIdbSYt05aZETK3CuVWsaHeTArdKn8Jlgts42gOvOFDVF5EwROU9ENrvbOoiIpMM2TyWasJA730F2acsezpMkPLfZIY/Zea+HsLcc+IKNjXTEZFeMeJe510ZB3O1k0SE2CyPAr8kWznfkLZ2Fa3ZnI6Ad5M5jZsLWONlOCipgeRffJZE6Jm5V61gRuSZPtqXgZJab2dmTqfXdGFQtWGHSApBDjnesiFw90y83HaAJO8by+a2uni4FBEoKDG0SkWehkecwSzmnkSfJyYlTsjsC7NPCbNEBwP7kQmXr4vkIcJQ7X2t17dURYHnlzjyXneTU7SeAPwA+bvjVcpkctfNstJyuyDgVGbA80MMX2WYy/Vv6bEybxWwOirgP2UrYMpeW0qISlrfmnKeawdDeHQzfs0x2t+wfAc5jeitMUQNcXIvWAnMWlgJPt1SoNh8BduXHxDKHT1gsTXOKIElBjtyK9Wpl3vOie4tM2XaTz9Nc0aPWYsa0M0U+l1tkOe8FZfQQzxXZtoLPv5v/Uee0kxxySYtHEsn2G4B3u+MgLk99kS1AjJK/oqQULyvGZiyW8SPzrmOar5sLjQdbNTF00LRqNiwqgfotqOZmC41bn2WyObFzjHWNArZ22yo0ae7x3ArgQhN2l1UTx3LirbSJz3nY1GzcX0C2Pp+FB5tZx5G1w0zmGCwtAFlbVLbCjHoAeCXRhWrVNq3kucDY/DKm1umL6hDSJotJo/i9TkRuT1R1iaVMDZ77DypjY5Xy3KvuteB9NexCNVdBq7YpNqs9j5O1GHuCNJnqdonHPcZAXTUxdbKNqURf945sdU/Jlv+qp9qmx2d7Pl8Hs50hqno9U80A6hxeg+kXr2lk19NIPkK3yKjlwu8iW/+V+ZoydVnyXEZ2ueoKpv+vaI9BmmNyE8fmgF1QgwXAk/8PRA7vPUHgbWAAAAAASUVORK5CYII=" alt="APITR" class="h-9 w-auto invert dark:invert-0 select-none">
+                    <div>
+                        <span class="font-bold text-lg tracking-[0.25em] text-gray-900 dark:text-white">APITR</span>
+                        <span class="ml-2 text-xs px-2 py-0.5 rounded-full font-medium bg-gray-100 text-gray-700 dark:bg-white/10 dark:text-gray-300 border border-gray-200 dark:border-white/20">v1.0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Global Search & System Info -->
+            <div class="flex items-center gap-3 sm:gap-4">
+                <div class="relative hidden sm:block w-64 md:w-80">
+                    <input type="text" id="endpoint-search" placeholder="Endpoint veya parametre ara..." class="w-full pl-9 pr-4 py-2 text-sm rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-100/70 dark:bg-gray-900/70 focus:outline-none focus:ring-2 focus:ring-neutral-500 transition-all text-gray-800 dark:text-gray-200">
+                    <svg class="w-4 h-4 absolute left-3 top-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                </div>
+
+                <!-- Theme Switcher Toggle Button -->
+                <button id="theme-toggle" class="p-2.5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all shadow-sm">
+                    <svg id="theme-dark-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+                </button>
+
+                <a href="https://api.arsivtr.xyz" target="_blank" class="hidden md:flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-xl bg-black hover:bg-neutral-800 text-white dark:bg-white dark:hover:bg-neutral-200 dark:text-black transition shadow-md">
+                    <span>Base URL</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Layout -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex gap-8 py-8">
+
+        <!-- Sidebar Navigation -->
+        <aside id="sidebar" class="fixed top-16 bottom-0 lg:inset-y-0 left-0 z-30 w-72 bg-white dark:bg-darkbg lg:static lg:bg-transparent border-r lg:border-r-0 border-gray-200 dark:border-gray-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out p-6 lg:p-0 flex flex-col shrink-0 overflow-y-auto">
+            <div class="sm:hidden mb-4">
+                <input type="text" id="endpoint-search-mobile" placeholder="Endpoint ara..." class="w-full pl-9 pr-4 py-2 text-sm rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-neutral-500">
+            </div>
+
+            <div class="sticky top-24 space-y-6">
+                <!-- Base URL Card -->
+                <div class="p-4 rounded-2xl bg-white dark:bg-darkcard border border-gray-200/80 dark:border-darkborder shadow-sm">
+                    <span class="text-xs font-medium text-gray-400 uppercase tracking-wider block mb-1">Base Host</span>
+                    <div class="flex items-center justify-between bg-gray-50 dark:bg-gray-900/80 p-2.5 rounded-xl border border-gray-200/50 dark:border-gray-800">
+                        <code class="text-xs font-semibold text-gray-900 dark:text-gray-100 truncate">https://api.arsivtr.xyz</code>
+                        <button onclick="copyToClipboard('https://api.arsivtr.xyz', this)" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition p-1" title="Kopyala">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Category Links Navigation -->
+                <nav class="space-y-1">
+                    <div class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider px-3 mb-2">Kategoriler</div>
+                    <a href="#all" onclick="filterCategory('all', this, event)" class="cat-link active flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium transition bg-gray-100 dark:bg-white/10 text-black dark:text-white">
+                        <span class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 14a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 14a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+                            Tüm Servisler
+                        </span>
+                        <span id="count-all" class="text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-300 dark:bg-white/20 text-black dark:text-white">0</span>
+                    </a>
+
+                    <a href="#new" onclick="filterCategory('new', this, event)" class="cat-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 transition">
+                        <span class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                            <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Yeni Eklenenler</span>
+                        </span>
+                        <span id="count-new" class="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-500 text-white">0</span>
+                    </a>
+                    
+                    <a href="#weather" onclick="filterCategory('weather', this, event)" class="cat-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 transition">
+                        <span class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+                            Hava &amp; Gökyüzü
+                        </span>
+                        <span id="count-weather" class="text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400">0</span>
+                    </a>
+
+                    <a href="#money" onclick="filterCategory('money', this, event)" class="cat-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 transition">
+                        <span class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            Döviz &amp; Para
+                        </span>
+                        <span id="count-money" class="text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400">0</span>
+                    </a>
+
+                    <a href="#daily" onclick="filterCategory('daily', this, event)" class="cat-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 transition">
+                        <span class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            Günlük Hayat
+                        </span>
+                        <span id="count-daily" class="text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400">0</span>
+                    </a>
+
+                    <a href="#calc" onclick="filterCategory('calc', this, event)" class="cat-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 transition">
+                        <span class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                            Hesaplama Araçları
+                        </span>
+                        <span id="count-calc" class="text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400">0</span>
+                    </a>
+
+                    <a href="#fun" onclick="filterCategory('fun', this, event)" class="cat-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 transition">
+                        <span class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                            Eğlence &amp; Karar
+                        </span>
+                        <span id="count-fun" class="text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400">0</span>
+                    </a>
+
+                    <a href="#bot" onclick="filterCategory('bot', this, event)" class="cat-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 transition">
+                        <span class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                            Bot Komutları
+                        </span>
+                        <span id="count-bot" class="text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400">0</span>
+                    </a>
+
+                    <div class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider px-3 mt-4 mb-2">Geliştirici</div>
+
+                    <a href="#dev" onclick="filterCategory('dev', this, event)" class="cat-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 transition">
+                        <span class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                            Yazılımcı Araçları
+                        </span>
+                        <span id="count-dev" class="text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400">0</span>
+                    </a>
+                    <a href="#network" onclick="filterCategory('network', this, event)" class="cat-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 transition">
+                        <span class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                            Domain & Network
+                        </span>
+                        <span id="count-network" class="text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400">0</span>
+                    </a>
+
+                    <a href="#verification" onclick="filterCategory('verification', this, event)" class="cat-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 transition">
+                        <span class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            Doğrulama (Verification)
+                        </span>
+                        <span id="count-verification" class="text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400">0</span>
+                    </a>
+
+                    <a href="#turkey" onclick="filterCategory('turkey', this, event)" class="cat-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 transition">
+                        <span class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            Türkiye Verileri
+                        </span>
+                        <span id="count-turkey" class="text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400">0</span>
+                    </a>
+
+                    <a href="#tools" onclick="filterCategory('tools', this, event)" class="cat-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 transition">
+                        <span class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a2 2 0 002 2h3a2 2 0 012 2v3a2 2 0 01-2 2h-1a2 2 0 100 4h1a2 2 0 012 2v3a2 2 0 01-2 2h-3a2 2 0 01-2-2v-1a2 2 0 10-4 0v1a2 2 0 01-2 2H7a2 2 0 01-2-2v-3a2 2 0 00-2-2H2a2 2 0 01-2-2v-3a2 2 0 012-2h1a2 2 0 100-4H2a2 2 0 01-2-2V7a2 2 0 012-2h3a2 2 0 002-2V4z"/></svg>
+                            Araçlar & Kripto
+                        </span>
+                        <span id="count-tools" class="text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400">0</span>
+                    </a>
+
+                    <a href="#tempmail" onclick="filterCategory('tempmail', this, event)" class="cat-link flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 transition">
+                        <span class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            Gelişmiş Geçici E-Posta
+                        </span>
+                        <span id="count-tempmail" class="text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400">0</span>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Workspace Area -->
+        <main class="flex-1 min-w-0 space-y-6">
+
+            <!-- Hero Introduction -->
+            <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-neutral-900 to-black text-white border border-white/10 shadow-xl relative overflow-hidden">
+                <div class="relative z-10 max-w-2xl space-y-3">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-xs font-semibold tracking-wide border border-white/20">Açık API Servisleri</span>
+                        <button onclick="filterCategory('new', document.querySelector('a[href=&quot;#new&quot;]'), event); document.getElementById('endpoints-list').scrollIntoView({behavior:'smooth'})" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-400/30 text-xs font-semibold hover:bg-emerald-500/25 transition"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/></svg><span><span id="hero-new-count">0</span> yeni endpoint eklendi</span></button>
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Günlük Hayat ve Geliştiriciler İçin Ücretsiz API</h1>
+                    <p class="text-gray-300 text-sm leading-relaxed">Hava, döviz, kripto, deprem, hesaplayıcılar, bot komutları ve yazılımcı araçlarından domain, IP ve doğrulama servislerine kadar. Tek tıkla tarayıcıda açın veya projenize entegre edin.</p>
+                </div>
+                <img src="data:image/png;base64,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" alt="" aria-hidden="true" class="absolute right-4 top-1/2 -translate-y-1/2 h-36 sm:h-40 w-auto opacity-10 pointer-events-none select-none hidden sm:block">
+                <!-- Decorative element -->
+                <div class="absolute -right-10 -bottom-10 w-64 h-64 rounded-full bg-white/5 blur-3xl pointer-events-none"></div>
+            </div>
+
+            <!-- Endpoints Container -->
+            <div id="endpoints-list" class="space-y-4">
+                <!-- Endpoints rendered via JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-gray-900 text-white dark:bg-white dark:text-gray-900 shadow-xl border border-gray-800 dark:border-gray-200 text-sm font-medium">
+            <svg class="w-5 h-5 text-white dark:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span id="toast-message">Kopyalandı!</span>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // API Base URL
+        const API_BASE = "https://api.arsivtr.xyz";
+
+        // Param helper: P(name, default, desc, {q: query param, opt: optional, type})
+        const P = (name, def, desc, o = {}) => ({ name, type: o.type || 'string', required: !o.opt, default: def, desc, ...(o.q ? { in: 'query' } : {}) });
+
+        // Endpoint Data Registry
+        const endpoints = [
+            // Hava & Gökyüzü
+            { id: 'hava', title: 'Hava Durumu', category: 'weather', method: 'GET', path: '/hava/{sehir}',
+              description: 'Şehir için anlık hava durumu ve 5 günlük tahmin: sıcaklık, hissedilen, nem, rüzgar, yağış ihtimali.',
+              params: [P('sehir', 'istanbul', 'Şehir adı (Örn: ankara, izmir)'), P('ulke', '', 'Aynı isimli şehirler için ülke kodu (Örn: DE)', { q: 1, opt: 1 })] },
+            { id: 'havakalitesi', title: 'Hava Kalitesi (AQI)', category: 'weather', method: 'GET', path: '/havakalitesi/{sehir}',
+              description: 'Şehrin hava kalitesi indeksi, PM2.5, PM10, ozon ve diğer kirletici değerleri.',
+              params: [P('sehir', 'istanbul', 'Şehir adı'), P('ulke', '', 'Ülke kodu (Örn: TR)', { q: 1, opt: 1 })] },
+            { id: 'gunes', title: 'Gün Doğumu, Batımı & UV', category: 'weather', method: 'GET', path: '/gunes/{sehir}',
+              description: 'Bugün için gün doğumu, gün batımı, gün uzunluğu ve UV indeksi.',
+              params: [P('sehir', 'izmir', 'Şehir adı'), P('ulke', '', 'Ülke kodu (Örn: TR)', { q: 1, opt: 1 })] },
+            { id: 'ay', title: 'Ay Evresi', category: 'weather', method: 'GET', path: '/ay',
+              description: 'Ay evresi, aydınlanma yüzdesi ve sonraki yeni ay / dolunay tarihi.',
+              params: [P('tarih', '', 'YYYY-AA-GG (boş bırakırsanız bugün)', { q: 1, opt: 1 })] },
+
+            // Döviz & Para
+            { id: 'doviz-liste', title: 'Döviz Kurları (Tümü)', category: 'money', method: 'GET', path: '/doviz',
+              description: 'TCMB gösterge kurlarının tamamını TL karşılığıyla listeler.', params: [] },
+            { id: 'doviz', title: 'Tek Döviz Kuru', category: 'money', method: 'GET', path: '/doviz/{kod}',
+              description: 'Seçilen para biriminin TL alış ve satış kuru.',
+              params: [P('kod', 'usd', 'Para birimi kodu (Örn: usd, eur, gbp)')] },
+            { id: 'doviz-cevir', title: 'Döviz Çevirici', category: 'money', method: 'GET', path: '/doviz/{kod}/{hedef}',
+              description: 'Bir para birimini diğerine çevirir. TL için try yazın.',
+              params: [P('kod', 'usd', 'Çevrilecek para birimi'), P('hedef', 'try', 'Hedef para birimi'), P('miktar', '100', 'Miktar (boşsa 1)', { q: 1, opt: 1, type: 'number' })] },
+            { id: 'kdv', title: 'KDV Hesaplama', category: 'money', method: 'GET', path: '/kdv/{tutar}',
+              description: 'KDV hariç tutardan KDV dahil toplamı, veya KDV dahil tutardan matrahı hesaplar.',
+              params: [P('tutar', '1000', 'Tutar (Örn: 1250,50)', { type: 'number' }), P('oran', '20', 'KDV oranı (varsayılan 20)', { q: 1, opt: 1, type: 'number' }), P('dahil', '0', 'Tutar KDV dahilse 1', { q: 1, opt: 1 })] },
+
+            { id: 'kripto-liste', title: 'Kripto Para Fiyatları', category: 'money', method: 'GET', path: '/kripto',
+              description: 'Popüler kripto paraların TL ve USD fiyatı, 24 saatlik değişim.', params: [] },
+            { id: 'kripto', title: 'Tek Kripto Para', category: 'money', method: 'GET', path: '/kripto/{coin}',
+              description: 'Seçilen kripto paranın TL / USD fiyatı ve 24 saatlik değişimi.',
+              params: [P('coin', 'btc', 'Kısa kod (btc, eth, sol, doge...) veya CoinGecko kimliği')] },
+            { id: 'kredi', title: 'Kredi Taksit Hesaplama', category: 'money', method: 'GET', path: '/kredi/{tutar}/{vade}',
+              description: 'Aylık taksit, toplam geri ödeme ve ilk 12 ay ödeme planı. Vergi ve masraflar dahil değildir.',
+              params: [P('tutar', '100000', 'Kredi tutarı', { type: 'number' }), P('vade', '12', 'Vade (ay)', { type: 'integer' }), P('faiz', '3.5', 'Aylık faiz oranı (%)', { q: 1, type: 'number' }), P('tur', 'aylik', 'yillik yazarsanız faiz yıllık kabul edilir', { q: 1, opt: 1 })] },
+            { id: 'mevduat', title: 'Mevduat Getirisi', category: 'money', method: 'GET', path: '/mevduat/{anapara}/{gun}',
+              description: 'Vadeli mevduat için brüt ve net getiri hesaplar.',
+              params: [P('anapara', '100000', 'Yatırılan tutar', { type: 'number' }), P('gun', '32', 'Vade (gün)', { type: 'integer' }), P('faiz', '45', 'Yıllık faiz oranı (%)', { q: 1, type: 'number' }), P('stopaj', '', 'Stopaj oranı (%), boşsa 0', { q: 1, opt: 1, type: 'number' })] },
+
+            { id: 'zekat', title: 'Zekat Hesaplama', category: 'money', method: 'GET', path: '/zekat/{varlik}',
+              description: 'Birikiminizin zekat tutarını hesaplar. Nisap değerini (80,18 gr altının TL karşılığı) siz girersiniz.',
+              params: [P('varlik', '500000', 'Toplam varlık (TL)', { type: 'number' }), P('nisap', '250000', 'Nisap miktarı (TL)', { q: 1, type: 'number' }), P('borc', '', 'Borç (TL), boşsa 0', { q: 1, opt: 1, type: 'number' })] },
+
+            // Günlük Hayat
+            { id: 'deprem', title: 'Son Depremler', category: 'daily', method: 'GET', path: '/deprem',
+              description: 'Son 72 saatteki depremler (AFAD). Büyüklük ve ile göre süzülebilir.',
+              params: [P('min', '3', 'Minimum büyüklük', { q: 1, opt: 1, type: 'number' }), P('limit', '10', 'Kaç kayıt (en fazla 50)', { q: 1, opt: 1, type: 'integer' }), P('il', '', 'İl adına göre süz (Örn: izmir)', { q: 1, opt: 1 })] },
+            { id: 'wiki', title: 'Vikipedi Özeti', category: 'daily', method: 'GET', path: '/wiki/{konu}',
+              description: 'Vikipedi maddesinin kısa özeti, görseli ve bağlantısı.',
+              params: [P('konu', 'Türkiye', 'Madde adı'), P('dil', '', 'Dil kodu (varsayılan tr, örn: en)', { q: 1, opt: 1 })] },
+            { id: 'bugun', title: 'Tarihte Bugün', category: 'daily', method: 'GET', path: '/bugun',
+              description: 'Bugün veya seçilen günde yaşanmış önemli olaylar, doğumlar, ölümler.',
+              params: [P('tarih', '', 'AA-GG (Örn: 10-29, boşsa bugün)', { q: 1, opt: 1 }), P('tur', 'events', 'events, births, deaths veya holidays', { q: 1, opt: 1 }), P('limit', '10', 'Kaç kayıt', { q: 1, opt: 1, type: 'integer' })] },
+            { id: 'plaka', title: 'Plaka & Alan Kodu', category: 'daily', method: 'GET', path: '/plaka/{kod}',
+              description: 'Plaka kodundan il, il adından plaka, alan kodundan il bulur.',
+              params: [P('kod', '34', 'Plaka (34), il adı (izmir) veya alan kodu (312)')] },
+            { id: 'burc', title: 'Burç Bulucu', category: 'daily', method: 'GET', path: '/burc/{tarih}',
+              description: 'Doğum tarihine göre burç, element ve tarih aralığı.',
+              params: [P('tarih', '1995-03-25', 'YYYY-AA-GG veya AA-GG')] },
+
+            { id: 'saat', title: 'Dünya Saati', category: 'daily', method: 'GET', path: '/saat/{sehir}',
+              description: 'Dünyanın herhangi bir şehrinde şu an saat kaç? Zaman dilimi de yazabilirsiniz (Europe/London).',
+              params: [P('sehir', 'london', 'Şehir adı veya zaman dilimi')] },
+            { id: 'mesafe', title: 'İki Şehir Arası Mesafe', category: 'daily', method: 'GET', path: '/mesafe/{sehir1}/{sehir2}',
+              description: 'İki şehir arasındaki kuş uçuşu mesafeyi km ve mil olarak verir.',
+              params: [P('sehir1', 'istanbul', 'Başlangıç şehri'), P('sehir2', 'ankara', 'Varış şehri')] },
+            { id: 'tatilkalan', title: 'Sonraki Tatile Kaç Gün Var', category: 'daily', method: 'GET', path: '/tatilkalan',
+              description: 'Bir sonraki resmi tatile kalan gün ve yaklaşan tatillerin listesi.', params: [] },
+            { id: 'hicri', title: 'Hicri Takvim', category: 'daily', method: 'GET', path: '/hicri/{tarih}',
+              description: 'Miladi tarihin hicri takvimdeki karşılığı.',
+              params: [P('tarih', '2026-10-29', 'YYYY-AA-GG')] },
+            { id: 'sozluk', title: 'TDK Sözlük', category: 'daily', method: 'GET', path: '/sozluk/{kelime}',
+              description: 'Türkçe bir kelimenin anlamları ve örnek cümlesi.',
+              params: [P('kelime', 'merhaba', 'Aranacak kelime')] },
+            { id: 'cevir', title: 'Metin Çeviri', category: 'daily', method: 'GET', path: '/cevir',
+              description: 'Kısa metinleri çevirir (en fazla 500 karakter). Kaynak dil boşsa otomatik algılanır.',
+              params: [P('q', 'hello world', 'Çevrilecek metin', { q: 1 }), P('to', 'tr', 'Hedef dil kodu (tr, en, de...)', { q: 1, opt: 1 }), P('from', '', 'Kaynak dil kodu', { q: 1, opt: 1 })] },
+
+            { id: 'tarihyazi', title: 'Tarihi Yazıyla Yaz', category: 'daily', method: 'GET', path: '/tarihyazi/{tarih}',
+              description: 'Rakamla yazılan tarihi yazıya çevirir (dilekçe, sözleşme, senet için).',
+              params: [P('tarih', '2026-10-29', 'YYYY-AA-GG')] },
+            { id: 'telefon', title: 'Telefon Doğrulama', category: 'daily', method: 'GET', path: '/telefon/{numara}',
+              description: 'Türkiye telefon numarasını doğrular, biçimlendirir. Cep ve sabit hat ayrımı, sabit hatta il bilgisi verir.',
+              params: [P('numara', '05321234567', 'Telefon numarası (0, +90, boşluk olabilir)')] },
+            { id: 'dilekce', title: 'Dilekçe Taslağı', category: 'daily', method: 'GET', path: '/dilekce',
+              description: 'Konu, kurum ve bilgilerinizle hazır bir dilekçe taslağı üretir.',
+              params: [P('konu', 'Adres değişikliği', 'Dilekçe konusu', { q: 1 }), P('kurum', '', 'Kurum adı', { q: 1, opt: 1 }), P('ad', '', 'Ad soyad', { q: 1, opt: 1 }), P('adres', '', 'Adres', { q: 1, opt: 1 }), P('aciklama', '', 'Açıklama metni', { q: 1, opt: 1 })] },
+            { id: 'mesaj', title: 'Kutlama Mesajı', category: 'daily', method: 'GET', path: '/mesaj/{tur}',
+              description: 'Bayram, doğum günü, geçmiş olsun gibi hazır mesajlar. Türler: bayram, dogumgunu, gecmisolsun, yeniyil, tebrik, hayirliolsun, gunaydin, iyigeceler.',
+              params: [P('tur', 'bayram', 'Mesaj türü'), P('isim', '', 'Kişinin adı', { q: 1, opt: 1 })] },
+            { id: 'yemek', title: 'Ne Pişirsem?', category: 'daily', method: 'GET', path: '/yemek/{ogun}',
+              description: 'Öğüne ve elinizdeki malzemelere göre yemek önerir. Öğünler: kahvalti, corba, ana, salata, tatli.',
+              params: [P('ogun', 'ana', 'Öğün'), P('malzeme', 'patates', 'Elinizdeki malzemeler (virgülle)', { q: 1, opt: 1 }), P('adet', '3', 'Kaç öneri (en fazla 5)', { q: 1, opt: 1, type: 'integer' })] },
+            { id: 'giyim', title: 'Bugün Ne Giysem?', category: 'daily', method: 'GET', path: '/giyim/{sehir}',
+              description: 'Şehrin hava durumuna göre ne giymeniz gerektiğini söyler. Yağmur, rüzgar ve sıcaklığa bakar.',
+              params: [P('sehir', 'istanbul', 'Şehir adı')] },
+            { id: 'varis', title: 'Varış Saati Hesapla', category: 'daily', method: 'GET', path: '/varis/{km}/{hiz}',
+              description: 'Mesafe ve ortalama hızdan yolculuk süresi ve varış saatini hesaplar, molaları ekler.',
+              params: [P('km', '450', 'Mesafe (km)', { type: 'number' }), P('hiz', '90', 'Ortalama hız (km/saat)', { type: 'number' }), P('saat', '', 'Çıkış saati HH:MM (boşsa şu an)', { q: 1, opt: 1 }), P('mola', '15', 'Her 2 saatte mola (dk)', { q: 1, opt: 1, type: 'integer' })] },
+
+            // Hesaplama Araçları
+            { id: 'yas', title: 'Yaş Hesaplama', category: 'calc', method: 'GET', path: '/yas/{tarih}',
+              description: 'Doğum tarihinden yaş, toplam gün, sonraki doğum gününe kalan gün ve burç.',
+              params: [P('tarih', '1995-03-25', 'Doğum tarihi (YYYY-AA-GG)')] },
+            { id: 'tarihfark', title: 'İki Tarih Arası Fark', category: 'calc', method: 'GET', path: '/tarihfark/{baslangic}/{bitis}',
+              description: 'İki tarih arasındaki gün, hafta, ay ve iş günü sayısını verir (resmi tatiller düşülür).',
+              params: [P('baslangic', '2026-01-01', 'Başlangıç tarihi (YYYY-AA-GG)'), P('bitis', '2026-12-31', 'Bitiş tarihi (YYYY-AA-GG)')] },
+            { id: 'bmi', title: 'Vücut Kitle İndeksi', category: 'calc', method: 'GET', path: '/bmi/{boy}/{kilo}',
+              description: 'Boy ve kilodan vücut kitle indeksi ve kategori. Tıbbi tavsiye değildir.',
+              params: [P('boy', '175', 'Boy (cm)', { type: 'number' }), P('kilo', '70', 'Kilo (kg)', { type: 'number' })] },
+            { id: 'birim', title: 'Birim Çevirici', category: 'calc', method: 'GET', path: '/birim/{deger}/{from}/{to}',
+              description: 'Uzunluk, kütle, hacim, hız, alan, veri ve sıcaklık birimlerini çevirir. Birim listesi için /birim.',
+              params: [P('deger', '100', 'Çevrilecek değer', { type: 'number' }), P('from', 'km', 'Kaynak birim (Örn: km, kg, c)'), P('to', 'mi', 'Hedef birim (Örn: mi, lb, f)')] },
+
+            { id: 'indirim', title: 'İndirim Hesaplama', category: 'calc', method: 'GET', path: '/indirim/{fiyat}/{oran}',
+              description: 'İndirim tutarını ve indirimli fiyatı hesaplar.',
+              params: [P('fiyat', '1500', 'Fiyat', { type: 'number' }), P('oran', '25', 'İndirim oranı (%)', { type: 'number' })] },
+            { id: 'yuzde', title: 'Yüzde Hesaplama', category: 'calc', method: 'GET', path: '/yuzde/{a}/{b}',
+              description: "a'nın yüzde b'si, artış, azalış, a'nın b içindeki yüzdesi ve değişim oranı.",
+              params: [P('a', '200', 'Birinci sayı', { type: 'number' }), P('b', '15', 'İkinci sayı', { type: 'number' })] },
+            { id: 'bahsis', title: 'Bahşiş & Hesap Bölüşme', category: 'calc', method: 'GET', path: '/bahsis/{hesap}',
+              description: 'Hesaba bahşiş ekler ve kişi başı düşen tutarı bulur.',
+              params: [P('hesap', '850', 'Hesap tutarı', { type: 'number' }), P('yuzde', '10', 'Bahşiş oranı (%)', { q: 1, opt: 1, type: 'number' }), P('kisi', '4', 'Kişi sayısı', { q: 1, opt: 1, type: 'integer' })] },
+            { id: 'romen', title: 'Romen Rakamı Çevirici', category: 'calc', method: 'GET', path: '/romen/{sayi}',
+              description: 'Sayıyı romen rakamına veya romen rakamını sayıya çevirir (1-3999).',
+              params: [P('sayi', '1994', 'Sayı (1994) veya romen rakamı (MCMXCIV)')] },
+            { id: 'yaziyla', title: 'Tutarı Yazıya Çevir', category: 'calc', method: 'GET', path: '/yaziyla/{tutar}',
+              description: 'Rakamla yazılan tutarı Türkçe yazıya çevirir. Çek ve senet yazısı için kullanışlıdır.',
+              params: [P('tutar', '1250,50', 'Tutar (Örn: 1250,50)')] },
+
+            { id: 'gno', title: 'Not Ortalaması (GNO)', category: 'calc', method: 'GET', path: '/gno',
+              description: 'Ders notları ve kredilerinden 4\'lük GNO hesaplar. Harf (AA:3) veya puan (85:3) yazabilirsiniz.',
+              params: [P('dersler', 'AA:3,BB:4,CC:2', 'not:kredi çiftleri, virgülle ayrılır', { q: 1 })] },
+            { id: 'gecmenotu', title: 'Geçme Notu Hesapla', category: 'calc', method: 'GET', path: '/gecmenotu/{vize}',
+              description: 'Vize notunuza göre dersi geçmek için finalden almanız gereken notu bulur.',
+              params: [P('vize', '55', 'Vize notu', { type: 'number' }), P('vizeoran', '40', 'Vize etkisi (%)', { q: 1, opt: 1, type: 'number' }), P('gecme', '60', 'Geçme notu', { q: 1, opt: 1, type: 'number' })] },
+            { id: 'boya', title: 'Boya, Parke, Fayans', category: 'calc', method: 'GET', path: '/boya/{en}/{boy}/{yukseklik}',
+              description: 'Oda ölçüsünden gereken boya litresi, parke paketi ve fayans adedini hesaplar.',
+              params: [P('en', '4', 'Oda eni (m)', { type: 'number' }), P('boy', '5', 'Oda boyu (m)', { type: 'number' }), P('yukseklik', '2.6', 'Tavan yüksekliği (m)', { type: 'number' }), P('kapi', '1', 'Kapı adedi', { q: 1, opt: 1, type: 'integer' }), P('pencere', '1', 'Pencere adedi', { q: 1, opt: 1, type: 'integer' }), P('kat', '2', 'Boya kat sayısı', { q: 1, opt: 1, type: 'integer' })] },
+            { id: 'elektrik', title: 'Elektrik Maliyeti', category: 'calc', method: 'GET', path: '/elektrik/{watt}/{saat}',
+              description: 'Bir cihazın aylık elektrik maliyetini hesaplar. Kilowatt saat fiyatını faturanızdan yazın.',
+              params: [P('watt', '1500', 'Cihaz gücü (watt)', { type: 'number' }), P('saat', '3', 'Günlük kullanım (saat)', { type: 'number' }), P('fiyat', '3.2', 'kWh birim fiyatı (TL)', { q: 1, type: 'number' }), P('gun', '30', 'Gün sayısı', { q: 1, opt: 1, type: 'integer' })] },
+            { id: 'klima', title: 'Klima BTU Hesapla', category: 'calc', method: 'GET', path: '/klima/{m2}',
+              description: 'Oda büyüklüğüne göre uygun klima kapasitesini (BTU) önerir.',
+              params: [P('m2', '25', 'Oda büyüklüğü (m2)', { type: 'number' }), P('ustkat', '', 'Üst katsa 1', { q: 1, opt: 1 }), P('gunes', '', 'Çok güneş alıyorsa 1', { q: 1, opt: 1 }), P('kisi', '2', 'Odadaki kişi sayısı', { q: 1, opt: 1, type: 'integer' })] },
+            { id: 'tuketim', title: 'Yakıt Tüketimi Çevirici', category: 'calc', method: 'GET', path: '/tuketim/{deger}/{from}/{to}',
+              description: 'l/100km, km/l ve mpg (ABD, İngiliz) arasında çevirir. Birimler: l100, kml, mpg, mpguk.',
+              params: [P('deger', '7', 'Değer', { type: 'number' }), P('from', 'l100', 'Kaynak birim'), P('to', 'mpg', 'Hedef birim')] },
+            { id: 'hesapla', title: 'Hesap Makinesi', category: 'calc', method: 'GET', path: '/hesapla',
+              description: 'Matematik ifadesini hesaplar. Parantez, üs (^), sqrt, abs, round, min, max, pi gibi fonksiyonlar desteklenir.',
+              params: [P('ifade', '2*(3+4)^2', 'Matematik ifadesi', { q: 1 })] },
+            { id: 'aktivite', title: 'Yakılan Kalori', category: 'calc', method: 'GET', path: '/aktivite/{tur}/{dakika}',
+              description: 'Spor veya aktivite süresine göre yaklaşık yakılan kaloriyi hesaplar. Liste için /aktivite.',
+              params: [P('tur', 'kosu', 'Aktivite (yuruyus, kosu, bisiklet, yuzme...)'), P('dakika', '30', 'Süre (dakika)', { type: 'number' }), P('kilo', '70', 'Kilonuz (kg)', { q: 1, opt: 1, type: 'number' })] },
+
+            // Eğlence & Karar
+            { id: 'sec', title: 'Karar Verici', category: 'fun', method: 'GET', path: '/sec',
+              description: 'Seçenekler arasından rastgele birini seçer. Ne yesek sorusuna son!',
+              params: [P('liste', 'pizza,kebap,lahmacun,döner', 'Virgülle ayrılmış seçenekler', { q: 1 })] },
+            { id: 'rastgele', title: 'Rastgele Sayı', category: 'fun', method: 'GET', path: '/rastgele/{min}/{max}',
+              description: 'Belirlediğiniz aralıkta rastgele sayı üretir.',
+              params: [P('min', '1', 'En küçük değer', { type: 'integer' }), P('max', '100', 'En büyük değer', { type: 'integer' }), P('adet', '5', 'Kaç sayı (en fazla 100)', { q: 1, opt: 1, type: 'integer' }), P('tekrarsiz', '0', 'Tekrarsız için 1', { q: 1, opt: 1 })] },
+            { id: 'loto', title: 'Loto Kolonu', category: 'fun', method: 'GET', path: '/loto/{oyun}',
+              description: 'Rastgele loto kolonu üretir: sayisal, sanstopu, onnumara, superloto. Eğlence amaçlıdır.',
+              params: [P('oyun', 'sayisal', 'sayisal, sanstopu, onnumara veya superloto'), P('kolon', '1', 'Kaç kolon (en fazla 10)', { q: 1, opt: 1, type: 'integer' })] },
+            { id: 'atasozu', title: 'Atasözü', category: 'fun', method: 'GET', path: '/atasozu',
+              description: 'Rastgele bir atasözü ve anlamı. gunluk=1 ile günün atasözünü alın.',
+              params: [P('gunluk', '', 'Günün atasözü için 1', { q: 1, opt: 1 })] },
+
+            // Bot Komutları
+            { id: 'etkilesim', title: 'Etkileşim Komutları (öp, sarıl...)', category: 'bot', method: 'GET', path: '/etkilesim/{eylem}',
+              description: 'Bot komutları için Türkçe ek uyumlu cümle üretir ("Ahmet, Ayşe\'yi öptü."). Eylemler: op, saril, tokat, elsik, selam, dans, agla, gul, alkis, durt, oksa. gif=1 ile gif linki de gelir.',
+              params: [P('eylem', 'op', 'Eylem'), P('kim', 'Ahmet', 'Eylemi yapan', { q: 1, opt: 1 }), P('kime', 'Ayşe', 'Hedef kişi', { q: 1, opt: 1 }), P('gif', '', 'Gif linki için 1', { q: 1, opt: 1 })] },
+            { id: 'ship', title: 'Ship Uyumluluğu', category: 'bot', method: 'GET', path: '/ship/{isim1}/{isim2}',
+              description: 'İki isim arasında eğlencelik uyum yüzdesi ve ship adı. Aynı çift her zaman aynı sonucu alır.',
+              params: [P('isim1', 'Ahmet', 'Birinci isim'), P('isim2', 'Ayşe', 'İkinci isim')] },
+            { id: '8top', title: 'Sihirli 8 Top', category: 'bot', method: 'GET', path: '/8top',
+              description: 'Evet, hayır ya da belki. Sorunuzu sorun, top cevaplasın.',
+              params: [P('soru', '', 'Sorunuz', { q: 1, opt: 1 })] },
+            { id: 'dogruluk-cesaret', title: 'Doğruluk mu Cesaret mi', category: 'bot', method: 'GET', path: '/dogruluk-cesaret/{tur}',
+              description: 'Doğruluk sorusu veya cesaret görevi verir.',
+              params: [P('tur', 'cesaret', 'dogruluk veya cesaret'), P('seviye', '', 'hafif, orta veya eglenceli', { q: 1, opt: 1 })] },
+            { id: 'fal', title: 'Günlük Fal', category: 'bot', method: 'GET', path: '/fal/{burc}',
+              description: 'Burca göre eğlencelik günlük fal. Aynı gün aynı burç aynı sonucu alır. Burç yazmazsanız kahve falı gelir.',
+              params: [P('burc', 'koc', 'Burç adı (koc, boga, ikizler...)')] },
+            { id: 'iltifat', title: 'Rastgele İltifat', category: 'bot', method: 'GET', path: '/iltifat',
+              description: 'Birine iltifat eder. İsim verirseniz kişiselleştirir.',
+              params: [P('isim', '', 'Kişinin adı', { q: 1, opt: 1 })] },
+            { id: 'espri', title: 'Espri ve Fıkra', category: 'bot', method: 'GET', path: '/espri/{tur}',
+              description: 'Kısa espri veya Nasreddin Hoca fıkrası.',
+              params: [P('tur', 'espri', 'espri veya fikra')] },
+            { id: 'bilmece', title: 'Bilmece', category: 'bot', method: 'GET', path: '/bilmece',
+              description: 'Rastgele bilmece ve cevabı. gizle=1 ile cevap saklanır, sadece ipucu gelir.',
+              params: [P('gizle', '', 'Cevabı gizlemek için 1', { q: 1, opt: 1 })] },
+            { id: 'quiz', title: 'Bilgi Yarışması', category: 'bot', method: 'GET', path: '/quiz/{kategori}',
+              description: 'Çoktan seçmeli soru. Kategoriler: cografya, tarih, genel. gizle=1 ile doğru cevap saklanır.',
+              params: [P('kategori', 'genel', 'Kategori'), P('gizle', '', 'Cevabı gizlemek için 1', { q: 1, opt: 1 })] },
+            { id: 'adamasmaca', title: 'Adam Asmaca Kelimesi', category: 'bot', method: 'GET', path: '/adamasmaca/{zorluk}',
+              description: 'Kelime, ipucu ve maske verir. Zorluk: kolay, orta, zor.',
+              params: [P('zorluk', 'orta', 'Zorluk seviyesi'), P('gizle', '', 'Kelimeyi gizlemek için 1', { q: 1, opt: 1 })] },
+            { id: 'wordle', title: 'Wordle (Kelime Oyunu)', category: 'bot', method: 'GET', path: '/wordle',
+              description: '5 harfli kelime verir veya tahmini değerlendirir (dogru, var, yok). gunluk=1 ile günün kelimesi sabit kalır.',
+              params: [P('gunluk', '1', 'Günün kelimesi için 1', { q: 1, opt: 1 }), P('tahmin', 'kalem', '5 harfli tahmin', { q: 1, opt: 1 })] },
+            { id: 'tkm', title: 'Taş Kağıt Makas', category: 'bot', method: 'GET', path: '/tkm/{hamle}',
+              description: 'Botla taş kağıt makas oynayın.',
+              params: [P('hamle', 'tas', 'tas, kagit veya makas')] },
+            { id: 'kart', title: 'Kart Çek / Poker', category: 'bot', method: 'GET', path: '/kart',
+              description: '52\'lik desteden kart çeker. oyun=poker ile 5 kart dağıtıp elin adını söyler.',
+              params: [P('adet', '5', 'Kaç kart', { q: 1, opt: 1, type: 'integer' })] },
+            { id: 'takmaad', title: 'Takma Ad Üretici', category: 'bot', method: 'GET', path: '/takmaad/{tur}',
+              description: 'Oyuncu, klan veya sunucu için isim önerir.',
+              params: [P('tur', 'oyuncu', 'oyuncu, klan veya sunucu'), P('adet', '5', 'Kaç isim (en fazla 20)', { q: 1, opt: 1, type: 'integer' })] },
+            { id: 'karakter', title: 'RPG Karakteri', category: 'bot', method: 'GET', path: '/karakter',
+              description: 'Rastgele irk, sınıf, silah ve özelliklere sahip bir rol yapma karakteri üretir.', params: [] },
+            { id: 'hediye', title: 'Hediye Önerisi', category: 'bot', method: 'GET', path: '/hediye/{kisi}',
+              description: 'Kişiye ve bütçeye göre hediye fikri. Kişiler: anne, baba, sevgili, arkadas, cocuk, ofis.',
+              params: [P('kisi', 'anne', 'Kişi'), P('butce', '', 'uygun, orta veya ozel', { q: 1, opt: 1 })] },
+
+            // Yazılımcı Araçları
+            { id: 'sahte', title: 'Sahte Kişi Verisi', category: 'dev', method: 'GET', path: '/sahte/kisi',
+              description: 'Test için sahte kişi üretir: geçerli TCKN, IBAN, telefon, e-posta, adres. Gerçek kişilere ait değildir.',
+              params: [P('adet', '3', 'Kaç kişi (en fazla 20)', { q: 1, opt: 1, type: 'integer' }), P('cinsiyet', '', 'erkek veya kadin', { q: 1, opt: 1 })] },
+            { id: 'cron', title: 'Cron Açıklayıcı', category: 'dev', method: 'GET', path: '/cron',
+              description: 'Cron ifadesini Türkçe açıklar ve sonraki çalışma zamanlarını Türkiye saatiyle listeler.',
+              params: [P('ifade', '*/15 9-17 * * 1-5', 'Cron ifadesi (5 alan)', { q: 1 }), P('adet', '5', 'Kaç çalışma zamanı', { q: 1, opt: 1, type: 'integer' })] },
+            { id: 'durumkodu', title: 'HTTP Durum Kodu', category: 'dev', method: 'GET', path: '/durumkodu/{kod}',
+              description: 'HTTP durum kodunun Türkçe açıklaması. Kod yazmazsanız tüm liste gelir.',
+              params: [P('kod', '404', 'Durum kodu', { type: 'integer' })] },
+            { id: 'cidr', title: 'CIDR / Subnet Hesapla', category: 'dev', method: 'GET', path: '/cidr/{ag}',
+              description: 'IPv4 ağ bloğunun maske, yayın adresi, kullanılabilir IP aralığı ve host sayısını hesaplar.',
+              params: [P('ag', '192.168.1.0/24', 'Ağ (Örn: 10.0.0.0/16)')] },
+            { id: 'ua', title: 'User-Agent Çözümleyici', category: 'dev', method: 'GET', path: '/ua',
+              description: 'User-Agent metninden tarayıcı, işletim sistemi, cihaz türü ve bot bilgisini çıkarır. Boş bırakırsanız kendi tarayıcınızı çözer.',
+              params: [P('q', '', 'User-Agent metni (boşsa sizinki)', { q: 1, opt: 1 })] },
+            { id: 'lorem', title: 'Türkçe Lorem Ipsum', category: 'dev', method: 'GET', path: '/lorem/{paragraf}',
+              description: 'Tasarım ve test için Türkçe sözcüklerden oluşan örnek metin üretir.',
+              params: [P('paragraf', '3', 'Paragraf sayısı (en fazla 10)', { type: 'integer' }), P('cumle', '4', 'Paragraf başına cümle', { q: 1, opt: 1, type: 'integer' })] },
+            { id: 'json', title: 'JSON Doğrula / Güzelleştir', category: 'dev', method: 'GET', path: '/json',
+              description: 'JSON metnini doğrular, biçimlendirir veya küçültür. Hata varsa nedenini söyler.',
+              params: [P('q', '{"ad":"Ali","yas":30}', 'JSON metni (en fazla 5000 karakter)', { q: 1 }), P('islem', 'format', 'format, minify veya dogrula', { q: 1, opt: 1 })] },
+            { id: 'regex', title: 'Regex Test', category: 'dev', method: 'GET', path: '/regex',
+              description: 'Düzenli ifadeyi bir metinde dener, eşleşmeleri ve grupları gösterir.',
+              params: [P('desen', '(\\d+)-(\\d+)', 'Regex deseni', { q: 1 }), P('metin', '10-20 ve 30-40', 'Test metni', { q: 1 }), P('bayrak', 'g', 'Bayraklar (g, i, m, s...)', { q: 1, opt: 1 })] },
+            { id: 'metinstil', title: 'Metin Araçları', category: 'dev', method: 'GET', path: '/metinstil/{stil}',
+              description: 'Türkçe büyük/küçük harf, ters, slug, mors, binary, hex, leet, ASCII, kelime sayacı ve daha fazlası. Liste için /metinstil.',
+              params: [P('stil', 'buyuk', 'Stil (buyuk, kucuk, ters, slug, mors, say...)'), P('q', 'istanbul ışık', 'Metin', { q: 1 })] },
+            { id: 'epostakontrol', title: 'E-posta Kontrol', category: 'dev', method: 'GET', path: '/epostakontrol/{adres}',
+              description: 'E-posta biçimini, MX kaydını ve tek kullanımlık alan adı olup olmadığını kontrol eder. Yazım hatası önerir.',
+              params: [P('adres', 'ornek@gmail.com', 'E-posta adresi')] },
+
+
+
+            // Domain & Network
+            {
+                id: 'whois',
+                title: 'Whois Sorgulama',
+                category: 'network',
+                method: 'GET',
+                path: '/whois/{domain}',
+                description: 'Belirtilen domain adresi için kayıtlı registrar, registrar tarihi, NS ve Whois detaylarını döndürür.',
+                params: [{ name: 'domain', type: 'string', required: true, default: 'example.com', desc: 'Sorgulanacak alan adı' }]
+            },
+            {
+                id: 'dns',
+                title: 'DNS Kayıtları',
+                category: 'network',
+                method: 'GET',
+                path: '/dns/{domain}',
+                description: 'Domain adresi için A, AAAA, MX, TXT, NS ve CNAME kayıtlarını listeler.',
+                params: [{ name: 'domain', type: 'string', required: true, default: 'google.com', desc: 'DNS kayıtları istenen alan adı' }]
+            },
+            {
+                id: 'available',
+                title: 'Domain Müsaitlik Kontrolü',
+                category: 'network',
+                method: 'GET',
+                path: '/available/{domain}',
+                description: 'Domain adresinin kayıt edilmeye müsait olup olmadığını kontrol eder.',
+                params: [{ name: 'domain', type: 'string', required: true, default: 'arsivtr-test-domain-123.com', desc: 'Kontrol edilecek alan adı' }]
+            },
+            {
+                id: 'ssl',
+                title: 'SSL Sertifika Analizi',
+                category: 'network',
+                method: 'GET',
+                path: '/ssl/{domain}',
+                description: 'Domain üzerindeki SSL sertifikasının geçerlilik tarihini, yayıncısını ve durumunu döndürür.',
+                params: [{ name: 'domain', type: 'string', required: true, default: 'github.com', desc: 'SSL analizi yapılacak alan adı' }]
+            },
+            {
+                id: 'headers',
+                title: 'HTTP Response Headers',
+                category: 'network',
+                method: 'GET',
+                path: '/headers/{domain}',
+                description: 'Hedef alan adından dönen sunucu header yanıtlarını detaylıca inceler.',
+                params: [{ name: 'domain', type: 'string', required: true, default: 'cloudflare.com', desc: 'Header verisi alınacak site' }]
+            },
+            {
+                id: 'expand',
+                title: 'Kısaltılmış URL Genişletici',
+                category: 'network',
+                method: 'GET',
+                path: '/expand/{url}',
+                description: 'Kısaltılmış bağlantıların arkasındaki nihai hedef URL adresini çözer.',
+                params: [{ name: 'url', type: 'string', required: true, default: 'https://tinyurl.com/example', desc: 'Çözümlenecek kısa bağlantı (URL Encoded)' }]
+            },
+            {
+                id: 'ip',
+                title: 'IP Coğrafi Konum & Bilgi',
+                category: 'network',
+                method: 'GET',
+                path: '/ip/{ip}',
+                description: 'IP adresinin ülke, şehir, koordinat, ISP ve lokasyon bilgilerini getirir.',
+                params: [{ name: 'ip', type: 'string', required: true, default: '8.8.8.8', desc: 'Sorgulanacak IPv4 veya IPv6 adresi' }]
+            },
+            {
+                id: 'asn',
+                title: 'ASN Detay Sorgulama',
+                category: 'network',
+                method: 'GET',
+                path: '/asn/{ip}',
+                description: 'IP adresinin bağlı olduğu Otonom Sistem Numarası (ASN) bilgilerini sunar.',
+                params: [{ name: 'ip', type: 'string', required: true, default: '1.1.1.1', desc: 'Otonom sistem detayı için IP adresi' }]
+            },
+            {
+                id: 'blacklist',
+                title: 'IP Karaliste (Blacklist) Kontrolü',
+                category: 'network',
+                method: 'GET',
+                path: '/blacklist/{ip}',
+                description: 'IP adresinin popüler spam ve güvenlik karalistelerinde olup olmadığını sorgular.',
+                params: [{ name: 'ip', type: 'string', required: true, default: '1.1.1.1', desc: 'Kontrol edilecek IP adresi' }]
+            },
+            {
+                id: 'myip',
+                title: 'Kendi IP Adresini Öğren',
+                category: 'network',
+                method: 'GET',
+                path: '/myip',
+                description: 'İstekte bulunan istemcinin dış IP adresini ve istemci bilgilerini döndürür.',
+                params: []
+            },
+
+            // Verification
+            {
+                id: 'mail-verify',
+                title: 'E-Posta Adresi Doğrulama',
+                category: 'verification',
+                method: 'GET',
+                path: '/mail/{eposta}',
+                description: 'E-posta adresinin biçimsel geçerliliğini, MX kayıtlarını ve kullanılıp kullanılamadığını doğrular.',
+                params: [{ name: 'eposta', type: 'string', required: true, default: 'test@gmail.com', desc: 'Kontrol edilecek e-posta adresi' }]
+            },
+            {
+                id: 'iban-verify',
+                title: 'IBAN Doğrulama',
+                category: 'verification',
+                method: 'GET',
+                path: '/iban/{iban}',
+                description: 'TR ve uluslararası IBAN numaralarının algoritma kontrollerini yapar ve banka kodunu çözer.',
+                params: [{ name: 'iban', type: 'string', required: true, default: 'TR330006100511123456789012', desc: 'Doğrulanacak IBAN numarası' }]
+            },
+            {
+                id: 'tckn-verify',
+                title: 'TCKN Algoritma Kontrolü',
+                category: 'verification',
+                method: 'GET',
+                path: '/tckn/{no}',
+                description: 'Türkiye Cumhuriyeti Kimlik Numarasının matematiksel doğrulama algoritmasını kontrol eder.',
+                params: [{ name: 'no', type: 'string', required: true, default: '10000000146', desc: '11 haneli T.C. Kimlik Numarası' }]
+            },
+            {
+                id: 'vkn-verify',
+                title: 'VKN Doğrulama',
+                category: 'verification',
+                method: 'GET',
+                path: '/vkn/{no}',
+                description: '10 haneli Vergi Kimlik Numarasının (VKN) matematiksel doğrulamasını gerçekleştirir.',
+                params: [{ name: 'no', type: 'string', required: true, default: '1234567890', desc: '10 haneli Vergi Kimlik Numarası' }]
+            },
+
+            // Turkey Data
+            {
+                id: 'tatil-year',
+                title: 'Yıllık Resmi Tatiller',
+                category: 'turkey',
+                method: 'GET',
+                path: '/tatil/{yil}',
+                description: 'Türkiye için ilgili yıldaki tüm resmi ve dini tatil günlerinin listesini getirir.',
+                params: [{ name: 'yil', type: 'integer', required: true, default: '2026', desc: 'Sorgulanacak yıl (Örn: 2026)' }]
+            },
+            {
+                id: 'tatil-date',
+                title: 'Tarih Resmi Tatil mi?',
+                category: 'turkey',
+                method: 'GET',
+                path: '/tatil/{yyyy-aa-gg}',
+                description: 'Belirtilen belirli bir günün resmi tatil olup olmadığını sorgular.',
+                params: [{ name: 'yyyy-aa-gg', type: 'string', required: true, default: '2026-10-29', desc: 'YYYY-AA-GG formatında tarih' }]
+            },
+            {
+                id: 'namaz',
+                title: 'Namaz Vakitleri',
+                category: 'turkey',
+                method: 'GET',
+                path: '/namaz/{sehir}',
+                description: 'Türkiye şehirleri için günlük ezan ve namaz vakitlerini getirir.',
+                params: [{ name: 'sehir', type: 'string', required: true, default: 'istanbul', desc: 'İl adı (Örn: istanbul, ankara)' }, { name: 'ulke', in: 'query', type: 'string', required: false, default: '', desc: 'Başka ülke için (Örn: Germany)' }]
+            },
+
+            // Tools & Cryptography
+            {
+                id: 'hash',
+                title: 'Metin Hash Oluşturucu',
+                category: 'tools',
+                method: 'GET',
+                path: '/hash/{metin}',
+                description: 'Girilmiş metin için MD5, SHA1, SHA256 ve SHA512 hash özetlerini üretir.',
+                params: [{ name: 'metin', type: 'string', required: true, default: 'arsivtr', desc: 'Hashlenecek içerik' }]
+            },
+            {
+                id: 'base64-encode',
+                title: 'Base64 Encode',
+                category: 'tools',
+                method: 'GET',
+                path: '/base64/encode/{metin}',
+                description: 'Düz metni Base64 formatına dönüştürür.',
+                params: [{ name: 'metin', type: 'string', required: true, default: 'Merhaba Dunya', desc: 'Dönüştürülecek metin' }]
+            },
+            {
+                id: 'base64-decode',
+                title: 'Base64 Decode',
+                category: 'tools',
+                method: 'GET',
+                path: '/base64/decode/{base64}',
+                description: 'Base64 ile kodlanmış veriyi orijinal metne çevirir.',
+                params: [{ name: 'base64', type: 'string', required: true, default: 'TWVyaGFiYSBEdW55YQ==', desc: 'Çözülecek Base64 dizesi' }]
+            },
+            {
+                id: 'url-encode',
+                title: 'URL Encode',
+                category: 'tools',
+                method: 'GET',
+                path: '/url/encode/{metin}',
+                description: 'Metni güvenli URL formatında kodlar.',
+                params: [{ name: 'metin', type: 'string', required: true, default: 'hello world & key=value', desc: 'Kodlanacak metin' }]
+            },
+            {
+                id: 'url-decode',
+                title: 'URL Decode',
+                category: 'tools',
+                method: 'GET',
+                path: '/url/decode/{metin}',
+                description: 'URL encode yapılmış metni orijinal haline çözer.',
+                params: [{ name: 'metin', type: 'string', required: true, default: 'hello%20world%20%26%20key%3Dvalue', desc: 'Çözümlenecek metin' }]
+            },
+            {
+                id: 'jwt',
+                title: 'JWT Token Çözücü',
+                category: 'tools',
+                method: 'GET',
+                path: '/jwt/{token}',
+                description: 'JSON Web Token (JWT) içeriğindeki header ve payload verilerini çözümler.',
+                params: [{ name: 'token', type: 'string', required: true, default: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.t-IDc25OHYBRd5gU15W5uE-hMCHM0L_Z34U6_v1oXrg', desc: 'JWT token dizesi' }]
+            },
+            {
+                id: 'uuid',
+                title: 'UUID v4 Üretici',
+                category: 'tools',
+                method: 'GET',
+                path: '/uuid',
+                description: 'Benzersiz rastgele bir UUID v4 dizesi üretir.',
+                params: [{ name: 'adet', in: 'query', type: 'integer', required: false, default: '1', desc: 'Kaç UUID üretilecek' }, { name: 'v', in: 'query', type: 'integer', required: false, default: '4', desc: 'UUID sürümü (4 veya 7)' }]
+            },
+            {
+                id: 'password',
+                title: 'Rastgele Güvenli Şifre',
+                category: 'tools',
+                method: 'GET',
+                path: '/password',
+                description: 'Kriptografik olarak güvenli, karmaşık rastgele parola oluşturur.',
+                params: [{ name: 'uzunluk', in: 'query', type: 'integer', required: false, default: '20', desc: 'Parola uzunluğu' }, { name: 'adet', in: 'query', type: 'integer', required: false, default: '1', desc: 'Kaç parola üretilecek' }]
+            },
+            {
+                id: 'qr',
+                title: 'Hızlı QR Kodu Servisi',
+                category: 'tools',
+                method: 'GET',
+                path: '/qr/{metin}',
+                description: 'Girilmiş metin veya URL için dinamik QR kod görseli veya verisi üretir.',
+                params: [{ name: 'metin', type: 'string', required: true, default: 'https://api.arsivtr.xyz', desc: 'QR koda dönüştürülecek veri' }]
+            },
+            {
+                id: 'qrcode-custom',
+                title: 'Özelleştirilmiş QR Kod',
+                category: 'tools',
+                method: 'GET',
+                path: '/qrcode/custom',
+                description: 'Boyut, renk ve hata tolerans parametreleri ile özel QR kodlar üretir.',
+                params: [{ name: 'text', in: 'query', type: 'string', required: true, default: 'https://api.arsivtr.xyz', desc: 'QR koda yazılacak metin / URL' }, { name: 'logo', in: 'query', type: 'string', required: false, default: 'APITR', desc: 'Ortadaki logo: HTTPS görsel linki veya kısa yazı (max 8 karakter)' }]
+            },
+            {
+                id: 'color',
+                title: 'Renk Paleti & HEX Çözücü',
+                category: 'tools',
+                method: 'GET',
+                path: '/color/{hex}',
+                description: 'HEX renk kodunun RGB, HSL ve yakın renk detaylarını sağlar.',
+                params: [{ name: 'hex', type: 'string', required: true, default: '6366f1', desc: '6 haneli HEX renk kodu' }]
+            },
+            {
+                id: 'roll',
+                title: 'Zar Atma (Dice Roll)',
+                category: 'tools',
+                method: 'GET',
+                path: '/roll/{NdM}',
+                description: 'Masaüstü rol yapma oyunları için standart zar formatında (Örn: 2d6, 1d20) rastgele zar atar.',
+                params: [{ name: 'NdM', type: 'string', required: true, default: '2d6', desc: 'Zar formatı (Örn: 1d6, 2d20)' }]
+            },
+            {
+                id: 'flip',
+                title: 'Yazı Tura At',
+                category: 'tools',
+                method: 'GET',
+                path: '/flip',
+                description: 'Rastgele Yazı (Heads) veya Tura (Tails) sonucu döndürür.',
+                params: [{ name: 'count', in: 'query', type: 'integer', required: false, default: '3', desc: 'Kaç kez atılacağı (1-100)' }]
+            },
+            {
+                id: 'minecraft',
+                title: 'Minecraft Sunucu Durumu',
+                category: 'tools',
+                method: 'GET',
+                path: '/minecraft/{sunucu}',
+                description: 'Minecraft sunucusunun aktif oyuncu sayısını, motd mesajını ve versiyonunu getirir.',
+                params: [{ name: 'sunucu', type: 'string', required: true, default: 'hypixel.net', desc: 'Minecraft sunucu IP veya domain adresi' }]
+            },
+            {
+                id: 'screenshot',
+                title: 'Web Sitesi Ekran Görüntüsü',
+                category: 'tools',
+                method: 'GET',
+                path: '/screenshot',
+                description: 'Verilen web adresinin anlık ekran görüntüsünü alır.',
+                params: [{ name: 'url', in: 'query', type: 'string', required: true, default: 'https://github.com', desc: 'Ekran görüntüsü alınacak HTTPS adres' }]
+            },
+            {
+                id: 'lyrics',
+                title: 'Şarkı Sözü Arama',
+                category: 'tools',
+                method: 'GET',
+                path: '/lyrics',
+                description: 'Şarkı adı ve sanatçı bilgisine göre şarkı sözlerini getirir.',
+                params: [{ name: 'q', in: 'query', type: 'string', required: true, default: 'Tarkan Şımarık', desc: 'Şarkı veya sanatçı adı' }]
+            },
+
+            // Temp Mail
+            {
+                id: 'tempmail-new',
+                title: 'Yeni Geçici E-Posta Oluştur',
+                category: 'tempmail',
+                method: 'POST',
+                path: '/tempmail/new',
+                description: 'Anında kullanıma hazır rastgele geçici bir e-posta adresi oluşturur. POST olduğu için buton yeni sekmede form ile POST gönderir.',
+                params: []
+            },
+            {
+                id: 'tempmail-inbox',
+                title: 'Geçici Kutuyu (Inbox) Kontrol Et',
+                category: 'tempmail',
+                method: 'GET',
+                path: '/tempmail/inbox/{id}',
+                description: 'Oluşturulmuş geçici e-posta adresine gelen e-postaları ve gelen içerikleri okur.',
+                params: [{ name: 'id', type: 'string', required: true, default: 'test-user-id', desc: 'Geçici e-posta kütüphane ID adresi' }]
+            }
+        ];
+
+        const categoryLabels = { bot: 'Bot Komutları', dev: 'Yazılımcı', fun: 'Eğlence & Karar', weather: 'Hava & Gökyüzü', money: 'Döviz & Para', daily: 'Günlük Hayat', calc: 'Hesaplama', network: 'Domain & Network', verification: 'Doğrulama', turkey: 'Türkiye', tools: 'Araçlar', tempmail: 'Temp Mail' };
+
+        // 'YENİ' rozeti ve 'Yeni Eklenenler' filtresi. Yeni eklenen endpoint'in id'sini buraya yazmanız yeterli.
+        const NEW_IDS = new Set(['zekat', 'tarihyazi', 'telefon', 'dilekce', 'mesaj', 'yemek', 'giyim', 'varis', 'gno', 'gecmenotu', 'boya', 'elektrik', 'klima', 'tuketim', 'hesapla', 'aktivite', 'etkilesim', 'ship', '8top', 'dogruluk-cesaret', 'fal', 'iltifat', 'espri', 'bilmece', 'quiz', 'adamasmaca', 'wordle', 'tkm', 'kart', 'takmaad', 'karakter', 'hediye', 'sahte', 'cron', 'durumkodu', 'cidr', 'ua', 'lorem', 'json', 'regex', 'metinstil', 'epostakontrol']);
+        endpoints.forEach(ep => { ep.isNew = NEW_IDS.has(ep.id); });
+
+        // State Management
+        let activeCategory = 'all';
+
+        // Render Endpoints Function
+        function renderEndpoints() {
+            const container = document.getElementById('endpoints-list');
+            const searchQuery = (document.getElementById('endpoint-search').value || document.getElementById('endpoint-search-mobile').value || '').toLowerCase();
+            
+            container.innerHTML = '';
+
+            const filtered = endpoints.filter(ep => {
+                const matchesCat = activeCategory === 'all' || (activeCategory === 'new' ? ep.isNew : ep.category === activeCategory);
+                const matchesSearch = ep.title.toLowerCase().includes(searchQuery) || 
+                                      ep.path.toLowerCase().includes(searchQuery) ||
+                                      ep.description.toLowerCase().includes(searchQuery);
+                return matchesCat && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="p-12 text-center rounded-3xl border border-gray-200 dark:border-darkborder bg-white dark:bg-darkcard">
+                        <svg class="w-12 h-12 mx-auto text-gray-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 9.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <h3 class="text-base font-semibold text-gray-800 dark:text-gray-200">Endpoint Bulunamadı</h3>
+                        <p class="text-xs text-gray-500 mt-1">Arama terimlerinizi veya filtrelerinizi değiştirmeyi deneyin.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(ep => {
+                const methodColor = ep.method === 'GET' 
+                    ? 'bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-gray-200 border-gray-300 dark:border-white/20' 
+                    : 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white';
+
+                const cardHtml = `
+                    <div id="card-${ep.id}" class="endpoint-card ${ep.isNew ? 'border-l-4 border-l-emerald-500' : ''} rounded-2xl border border-gray-200/80 dark:border-darkborder bg-white dark:bg-darkcard overflow-hidden shadow-sm transition-all duration-200">
+                        <!-- Card Header Accordion -->
+                        <button onclick="toggleCard('${ep.id}')" class="w-full p-4 sm:p-5 flex items-center justify-between text-left hover:bg-gray-50/50 dark:hover:bg-gray-800/30 transition">
+                            <div class="flex items-center gap-3 sm:gap-4 min-w-0">
+                                <span class="px-2.5 py-1 text-xs font-bold rounded-lg border ${methodColor}">${ep.method}</span>
+                                <div class="min-w-0">
+                                    <div class="flex items-center gap-2">
+                                        <h3 class="font-semibold text-gray-900 dark:text-gray-100 text-sm sm:text-base truncate">${ep.title}</h3>
+                                    </div>
+                                    <p class="text-xs font-mono text-gray-500 dark:text-gray-400 truncate mt-0.5">${ep.path}</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 shrink-0 ml-2">
+                                ${ep.isNew ? '<span class="shrink-0 text-[10px] font-extrabold tracking-wider px-2 py-1 rounded-md bg-emerald-500 text-white shadow-sm">YENİ</span>' : ''}
+                                <span class="hidden sm:inline-block text-xs font-medium px-2.5 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 ">${categoryLabels[ep.category] || ep.category}</span>
+                                <svg id="chevron-${ep.id}" class="w-5 h-5 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </div>
+                        </button>
+
+                        <!-- Card Expanded Content -->
+                        <div id="content-${ep.id}" class="hidden border-t border-gray-100 dark:border-gray-800/60 p-5 sm:p-6 space-y-6 bg-gray-50/30 dark:bg-gray-900/20">
+                            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">${ep.description}</p>
+
+                            <!-- Parameters Form Section -->
+                            ${ep.params.length > 0 ? `
+                                <div class="space-y-3">
+                                    <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Parametreler</h4>
+                                    <div class="space-y-2">
+                                        ${ep.params.map(p => `
+                                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 rounded-xl bg-white dark:bg-gray-900 border border-gray-200/70 dark:border-gray-800">
+                                                <div class="space-y-0.5">
+                                                    <div class="flex items-center gap-2">
+                                                        <span class="text-xs font-mono font-semibold text-gray-800 dark:text-gray-200">${p.name}</span>
+                                                        <span class="text-[10px] px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800 text-gray-500 font-mono">${p.type}${p.in === 'query' ? ' · query' : ''}</span>
+                                                        ${p.required ? '<span class="text-[10px] text-red-500 font-medium">*gerekli</span>' : '<span class="text-[10px] text-gray-400 font-medium">opsiyonel</span>'}
+                                                    </div>
+                                                    <p class="text-xs text-gray-400">${p.desc}</p>
+                                                </div>
+                                                <input type="text" id="input-${ep.id}-${p.name}" value="${String(p.default).replace(/&/g, '&amp;').replace(/"/g, '&quot;')}" oninput="updateSnippet('${ep.id}')" class="w-full sm:w-64 px-3 py-1.5 text-xs font-mono rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:ring-2 focus:ring-neutral-500 focus:outline-none">
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            ` : ''}
+
+                            <!-- Code Generator Tabs & Execute Button -->
+                            <div class="space-y-3">
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                                    <div class="flex items-center gap-1 bg-gray-200/60 dark:bg-gray-800/80 p-1 rounded-xl w-fit">
+                                        <button onclick="setTab('${ep.id}', 'curl')" id="tab-${ep.id}-curl" class="tab-btn active px-3 py-1 rounded-lg text-xs font-medium transition bg-white dark:bg-gray-900 text-gray-900 dark:text-white shadow-sm">cURL</button>
+                                        <button onclick="setTab('${ep.id}', 'fetch')" id="tab-${ep.id}-fetch" class="tab-btn px-3 py-1 rounded-lg text-xs font-medium text-gray-500 hover:text-gray-900 dark:hover:text-white transition">Fetch JS</button>
+                                        <button onclick="setTab('${ep.id}', 'python')" id="tab-${ep.id}-python" class="tab-btn px-3 py-1 rounded-lg text-xs font-medium text-gray-500 hover:text-gray-900 dark:hover:text-white transition">Python</button>
+                                        <button onclick="setTab('${ep.id}', 'node')" id="tab-${ep.id}-node" class="tab-btn px-3 py-1 rounded-lg text-xs font-medium text-gray-500 hover:text-gray-900 dark:hover:text-white transition">Node.js</button>
+                                    </div>
+                                    <button onclick="executeRequest('${ep.id}')" class="flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-black hover:bg-neutral-800 text-white dark:bg-white dark:hover:bg-neutral-200 dark:text-black font-medium text-xs transition shadow-md active:scale-95">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                                        <span>Linki Aç</span>
+                                    </button>
+                                </div>
+
+                                <!-- Code Output Display -->
+                                <div class="relative rounded-xl overflow-hidden bg-gray-900 border border-gray-800 text-gray-100">
+                                    <button onclick="copyCodeSnippet('${ep.id}')" class="absolute right-3 top-3 p-1.5 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-300 transition" title="Kod Kopyala">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                    </button>
+                                    <pre class="p-4 text-xs font-mono overflow-x-auto leading-relaxed"><code id="code-snippet-${ep.id}"></code></pre>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHtml);
+                updateSnippet(ep.id);
+            });
+
+            updateCategoryCounts();
+        }
+
+        // Accordion Toggle
+        function toggleCard(id) {
+            const content = document.getElementById(`content-${id}`);
+            const chevron = document.getElementById(`chevron-${id}`);
+            const isHidden = content.classList.contains('hidden');
+            
+            if (isHidden) {
+                content.classList.remove('hidden');
+                chevron.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                chevron.classList.remove('rotate-180');
+            }
+        }
+
+        // Category Filter
+        function filterCategory(cat, el, e) {
+            if (e) e.preventDefault();
+            activeCategory = cat;
+            document.querySelectorAll('.cat-link').forEach(l => {
+                l.classList.remove('bg-gray-100', 'dark:bg-white/10', 'text-black', 'dark:text-white');
+                l.classList.add('text-gray-600', 'dark:text-gray-400');
+            });
+            if (el) {
+                el.classList.remove('text-gray-600', 'dark:text-gray-400');
+                el.classList.add('bg-gray-100', 'dark:bg-white/10', 'text-black', 'dark:text-white');
+            }
+            document.getElementById('sidebar').classList.add('-translate-x-full');
+            renderEndpoints();
+        }
+
+        // Category Counts Update
+        function updateCategoryCounts() {
+            const counts = { all: endpoints.length, bot: 0, dev: 0, new: endpoints.filter(e => e.isNew).length, fun: 0, weather: 0, money: 0, daily: 0, calc: 0, network: 0, verification: 0, turkey: 0, tools: 0, tempmail: 0 };
+            endpoints.forEach(ep => {
+                if (counts[ep.category] !== undefined) counts[ep.category]++;
+            });
+            Object.keys(counts).forEach(k => {
+                const el = document.getElementById(`count-${k}`);
+                if (el) el.innerText = counts[k];
+            });
+            const heroNew = document.getElementById('hero-new-count');
+            if (heroNew) heroNew.innerText = counts.new;
+        }
+
+        // Active Snippet Tab Tracking
+        const activeTabs = {};
+
+        function setTab(epId, lang) {
+            activeTabs[epId] = lang;
+            const parent = document.getElementById(`card-${epId}`);
+            parent.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-white', 'dark:bg-gray-900', 'text-gray-900', 'dark:text-white', 'shadow-sm');
+                btn.classList.add('text-gray-500');
+            });
+            const activeBtn = document.getElementById(`tab-${epId}-${lang}`);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-white', 'dark:bg-gray-900', 'text-gray-900', 'dark:text-white', 'shadow-sm');
+                activeBtn.classList.remove('text-gray-500');
+            }
+            updateSnippet(epId);
+        }
+
+        // Construct Full Endpoint URL (path params + optional query params)
+        function getComputedUrl(ep) {
+            let path = ep.path;
+            const query = [];
+            ep.params.forEach(p => {
+                const input = document.getElementById(`input-${ep.id}-${p.name}`);
+                const raw = input ? input.value.trim() : '';
+                if (p.in === 'query') {
+                    const val = raw || (p.required ? p.default : '');
+                    if (val !== '') query.push(`${encodeURIComponent(p.name)}=${encodeURIComponent(val)}`);
+                } else {
+                    path = path.replace(`{${p.name}}`, encodeURIComponent(raw || p.default));
+                }
+            });
+            return `${API_BASE}${path}${query.length ? '?' + query.join('&') : ''}`;
+        }
+
+        // Generate Code Snippets Dynamic
+        function updateSnippet(epId) {
+            const ep = endpoints.find(e => e.id === epId);
+            if (!ep) return;
+
+            const targetLang = activeTabs[epId] || 'curl';
+            const url = getComputedUrl(ep);
+            const codeEl = document.getElementById(`code-snippet-${epId}`);
+
+            let snippet = '';
+
+            if (targetLang === 'curl') {
+                snippet = `curl -X ${ep.method} "${url}" \\
+  -H "Accept: application/json"`;
+            } else if (targetLang === 'fetch') {
+                snippet = `fetch("${url}", {
+  method: "${ep.method}",
+  headers: { "Accept": "application/json" }
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error("Hata:", error));`;
+            } else if (targetLang === 'python') {
+                snippet = `import requests
+
+url = "${url}"
+headers = {"Accept": "application/json"}
+
+response = requests.${ep.method.toLowerCase()}(url, headers=headers)
+print(response.json())`;
+            } else if (targetLang === 'node') {
+                snippet = `const axios = require('axios');
+
+axios.${ep.method.toLowerCase()}("${url}")
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error(error);
+  });`;
+            }
+
+            if (codeEl) codeEl.innerText = snippet;
+        }
+
+        // Open endpoint in a new browser tab (no fetch). POST endpoints use a form targeting a new tab.
+        function executeRequest(epId) {
+            const ep = endpoints.find(e => e.id === epId);
+            if (!ep) return;
+            const url = getComputedUrl(ep);
+            if (ep.method === 'POST') {
+                const form = document.createElement('form');
+                form.method = 'POST';
+                form.action = url;
+                form.target = '_blank';
+                document.body.appendChild(form);
+                form.submit();
+                document.body.removeChild(form);
+            } else {
+                window.open(url, '_blank', 'noopener');
+            }
+        }
+
+        // Copy Helper
+        function copyToClipboard(text) {
+            const done = () => showToast('Panoya kopyalandı!');
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(done).catch(() => legacyCopy(text, done));
+            } else {
+                legacyCopy(text, done);
+            }
+        }
+
+        function legacyCopy(text, cb) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            cb();
+        }
+
+        function copyCodeSnippet(epId) {
+            const codeEl = document.getElementById(`code-snippet-${epId}`);
+            if (codeEl) {
+                copyToClipboard(codeEl.innerText);
+            }
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 2500);
+        }
+
+        // Theme Switcher Setup
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-dark-icon');
+        const lightIcon = document.getElementById('theme-light-icon');
+
+        function initTheme() {
+            let saved = null; try { saved = localStorage.getItem('theme'); } catch (e) {}
+            if (saved === 'light') {
+                document.documentElement.classList.remove('dark');
+                lightIcon.classList.remove('hidden');
+                darkIcon.classList.add('hidden');
+            } else {
+                document.documentElement.classList.add('dark');
+                darkIcon.classList.remove('hidden');
+                lightIcon.classList.add('hidden');
+            }
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                try { localStorage.setItem('theme', 'light'); } catch (e) {}
+                lightIcon.classList.remove('hidden');
+                darkIcon.classList.add('hidden');
+            } else {
+                document.documentElement.classList.add('dark');
+                try { localStorage.setItem('theme', 'dark'); } catch (e) {}
+                darkIcon.classList.remove('hidden');
+                lightIcon.classList.add('hidden');
+            }
+        });
+
+        // Search Handlers
+        document.getElementById('endpoint-search').addEventListener('input', renderEndpoints);
+        document.getElementById('endpoint-search-mobile').addEventListener('input', renderEndpoints);
+
+        // Mobile Sidebar Toggle
+        const sidebar = document.getElementById('sidebar');
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+        });
+
+        // Initial Initialization
+        window.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            renderEndpoints();
+        });
+    </script>
+</body>
+</html>
